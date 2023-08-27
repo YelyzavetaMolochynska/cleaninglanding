@@ -1,0 +1,21 @@
+.counter {
+  &__block {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 21px 0px #0000002e;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+  }
+
+  &__title {
+    padding-top: 51px;
+    margin-bottom: 18px;
+    line-height: 68px;
+  }
+
+  &__paragraph {
+    margin-bottom: 59px;
+    color: #000000B2;
+  }
+}

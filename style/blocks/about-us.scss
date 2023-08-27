@@ -1,0 +1,17 @@
+.about-us {
+
+  &__paragraph {
+    z-index: 3;
+  }
+
+  &__image-container {
+    display: flex; 
+    z-index: -1;
+    height: min-content;
+    padding-top: 83px;
+  }
+
+  &__button {
+    z-index: 3;
+  }
+}
