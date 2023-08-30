@@ -26,43 +26,50 @@
     &--2 {
       background-image: url(../../img/slide-1-after.png);
     }
+
+    &--3 {
+      background-image: url(../../img/slide-2-before.png);
+    }
+
+    &--4 {
+      background-image: url(../../img/slide-2-after.png);
+    }
+
+    &--5 {
+      background-image: url(../../img/slide-3-before.png);
+    }
+
+    &--6 {
+      background-image: url(../../img/slide-3-after.png);
+    }
+
+    &--7 {
+      background-image: url(../../img/slide-4-before.png);
+    }
+
+    &--8 {
+      background-image: url(../../img/slide-4-after.png);
+    }
+
+    &--9 {
+      background-image: url(../../img/slide-5-before.png);
+    }
+
+    &--10 {
+      background-image: url(../../img/slide-5-after.png);
+    }
+
+    &--11 {
+      background-image: url(../../img/slide-6-before.png);
+    }
+
+    &--12 {
+      background-image: url(../../img/slide-6-after.png);
+    }
   }
 
   &__after {
     background-color: $color-blue-button;
     color: $color-text-white;
-  }
-
-  &__arrow-button {
-    --swiper-navigation-size: 0;
-    --swiper-theme-color: transparent;
-    z-index: 5;
-
-    &::after {
-      content: '';
-      background-repeat: no-repeat;
-      width: 82px;
-      height: 82px;
-      background-position: center;
-      border-radius: 50%;
-    }
-
-    &--next {
-
-      &::after {
-        box-shadow: 0px 4px 22px 0px #0000002E;
-        background-image: url(../../img/arrow-next.svg);
-      }
-    }
-
-    &--prev {
-      z-index: 5;
-
-      &::after {
-        box-shadow: 0px 0px 22px 4px #0000002E;
-        background-image: url(../../img/arrow-next.svg);
-        transform: rotate(180deg);
-      }
-    }
   }
 }

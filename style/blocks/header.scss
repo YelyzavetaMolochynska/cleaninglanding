@@ -15,14 +15,9 @@
 
   &__menu-item {
     margin-right: 40px;
-    border-bottom: 1px solid transparent;
 
     &:last-child {
       margin-right: 0;
-    }
-
-    &:hover {
-      border-bottom: 1px solid $color-black-text;
     }
   }
 
@@ -30,9 +25,17 @@
     text-decoration: none;
     color: $color-black-text;
     font-size: 1.125rem;
+    border-bottom: 2px solid transparent;
 
     &--tel {
+      margin-right: 0;
+      margin-left: auto;
+      width: fit-content;
       text-align: right;
+    }
+
+    &:hover {
+      border-bottom: 2px solid $color-black-text;
     }
   }
 

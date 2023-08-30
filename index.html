@@ -160,7 +160,11 @@
               grid__item--desktop-1-12
               grid__item--desktop-row-1-2"
             >
-            <img src="./img/aboutus.svg" alt="logo">
+            <img 
+              class="about-us__image"
+              src="./img/aboutus.svg" 
+              alt="logo"
+            >
           </div>
           <a 
             href="#form" 
@@ -358,7 +362,7 @@
       </div>
     </div>
 
-    <div class="our-works page__section">
+    <div id="our-works" class="our-works page__section">
       <div class="container">
         <div class="grid">
           <div 
@@ -384,7 +388,8 @@
               <div 
                 class="
                   our-works__arrow-button 
-                  our-works__arrow-button--prev 
+                  page__arrow-button
+                  page__arrow-button--prev
                   swiper-button-prev
                   grid__item
                   grid__item--desktop-2-3"
@@ -408,12 +413,12 @@
                 </div>
                 <div class="our-works__slide swiper-slide">
                   <div class="our-works__slide-container">
-                    <div class="our-works__image-container our-works__image-container--1">
+                    <div class="our-works__image-container our-works__image-container--3">
                       <p class="our-works__before page__white-background-text">
                         До
                       </p>
                     </div>
-                    <div class="our-works__image-container our-works__image-container--2">
+                    <div class="our-works__image-container our-works__image-container--4">
                       <p class="our-works__after page__white-background-text">
                         Після
                       </p>
@@ -422,12 +427,12 @@
                 </div>
                 <div class="our-works__slide swiper-slide">
                   <div class="our-works__slide-container">
-                    <div class="our-works__image-container our-works__image-container--1">
+                    <div class="our-works__image-container our-works__image-container--5">
                       <p class="our-works__before page__white-background-text">
                         До
                       </p>
                     </div>
-                    <div class="our-works__image-container our-works__image-container--2">
+                    <div class="our-works__image-container our-works__image-container--6">
                       <p class="our-works__after page__white-background-text">
                         Після
                       </p>
@@ -436,12 +441,12 @@
                 </div>
                 <div class="our-works__slide swiper-slide">
                   <div class="our-works__slide-container">
-                    <div class="our-works__image-container our-works__image-container--1">
+                    <div class="our-works__image-container our-works__image-container--7">
                       <p class="our-works__before page__white-background-text">
                         До
                       </p>
                     </div>
-                    <div class="our-works__image-container our-works__image-container--2">
+                    <div class="our-works__image-container our-works__image-container--8">
                       <p class="our-works__after page__white-background-text">
                         Після
                       </p>
@@ -450,12 +455,26 @@
                 </div>
                 <div class="our-works__slide swiper-slide">
                   <div class="our-works__slide-container">
-                    <div class="our-works__image-container our-works__image-container--1">
+                    <div class="our-works__image-container our-works__image-container--9">
                       <p class="our-works__before page__white-background-text">
                         До
                       </p>
                     </div>
-                    <div class="our-works__image-container our-works__image-container--2">
+                    <div class="our-works__image-container our-works__image-container--10">
+                      <p class="our-works__after page__white-background-text">
+                        Після
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="our-works__slide swiper-slide">
+                  <div class="our-works__slide-container">
+                    <div class="our-works__image-container our-works__image-container--11">
+                      <p class="our-works__before page__white-background-text">
+                        До
+                      </p>
+                    </div>
+                    <div class="our-works__image-container our-works__image-container--12">
                       <p class="our-works__after page__white-background-text">
                         Після
                       </p>
@@ -463,7 +482,17 @@
                   </div>
                 </div>
               </div>
-              <div class="our-works__arrow-button our-works__arrow-button--next swiper-button-next grid__item grid__item--desktop-11-11"></div>
+              <div 
+                class="
+                  our-works__arrow-button 
+                  our-works__arrow-button--next 
+                  page__arrow-button
+                  page__arrow-button--next
+                  swiper-button-next 
+                  grid__item 
+                  grid__item--desktop-11-11"
+              >
+              </div>
             </div>
           </div>
 
@@ -482,7 +511,7 @@
       </div>
     </div>
 
-    <div class="faq page__section">
+    <div id="faq" class="faq page__section">
       <div class="container">
         <div class="grid">
           <div 
@@ -498,7 +527,127 @@
               Роз'яснюємо найбільш поширені питання. Отримайте видповіді, які вас цікавлять або залишай запитання.
             </p>
           </div>
-          
+          <div class="faq__questions grid__item grid__item--desktop-1-11">
+            <div class="faq__question-block">
+              <div class="faq__question-container">
+                <h5 class="faq__question">
+                  Навіщо потрібна послуга хімчистки меблів?
+                </h5>
+                <button class="faq__button faq__button--plus"></button>
+              </div>
+            </div>
+            <div class="faq__question-block">
+              <div class="faq__question-container">
+                <h5 class="faq__question">
+                  Скільки часу займає процес чистки?
+                </h5>
+                <button class="faq__button faq__button--plus"></button>
+              </div>
+            </div>
+            <div class="faq__question-block">
+              <div class="faq__question-container">
+                <h5 class="faq__question">
+                  Як визначити точну вартість роботи?
+                </h5>
+                <button class="faq__button faq__button--plus"></button>
+              </div>
+            </div>
+            <div class="faq__question-block">
+              <div class="faq__question-container">
+                <h5 class="faq__question">
+                  Яким миючим засобом виконується чистка меблів?
+                </h5>
+                <button class="faq__button faq__button--plus"></button>
+              </div>
+            </div>
+            <div class="faq__question-block">
+              <div class="faq__question-container">
+                <h5 class="faq__question">
+                  Які є методи оплати?
+                </h5>
+                <button class="faq__button faq__button--plus"></button>
+              </div>
+            </div>
+            <div class="faq__question-block faq__question-block--last">
+              <div class="faq__question-container">
+                <h5 class="faq__question">
+                  Скільки часу необхідно для висихання меблів/килиму/авто?
+                </h5>
+                <button class="faq__button faq__button--plus"></button>
+              </div>
+            </div>
+            <a href="#form" class="faq__form-link">
+              Залишити запитання
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="comments" class="comments page__section">
+      <div class="container">
+        <div class="grid">
+          <div class="comments__title-block grid__item grid__item--desktop-1-6">
+            <h1 class="comments__title">
+              Чому нам <br>довіряють?
+            </h1>
+            <p class="comments__paragraph page__paragraph">
+              За досить короткий час ми отримали чимало позитивніх відгуків. Це говорить про те, що свою роботу ми виконуємо зажди як треба. Цінуємо кожного клієнта та щиро дякуємо за теплі відгуки!
+            </p>
+            <a class="comments__button button" href="#form">
+              Замовити
+            </a>
+          </div>
+          <div class="grid__item grid__item--desktop-7-12">
+            <div class="comments__swiper swiper">
+              <div 
+                class="
+                  page__arrow-button
+                  page__arrow-button--prev
+                  swiper-button-prev"
+              >
+              </div>
+              <div class="comments__swiper-wrapper swiper-wrapper">
+                <div class="comments__slide swiper-slide">
+                  <div class="comments__img-container">
+                    <img class="comments__img" src="./img/comments-slide-1.png" alt="image">
+                  </div>
+                </div>
+                <div class="comments__slide swiper-slide">
+                  <div class="comments__img-container">
+                    <img class="comments__img" src="./img/comments-slide-2.png" alt="image">
+                  </div>
+                </div>
+                <div class="comments__slide swiper-slide">
+                  <div class="comments__img-container">
+                    <img class="comments__img" src="./img/comments-slide-2.png" alt="image">
+                  </div>
+                </div>
+                <div class="comments__slide swiper-slide">
+                  <div class="comments__img-container">
+                    <img class="comments__img" src="./img/comments-slide-3.png" alt="image">
+                  </div>
+                </div>
+                <div class="comments__slide swiper-slide">
+                  <div class="comments__img-container">
+                    <img class="comments__img" src="./img/comments-slide-4.png" alt="image">
+                  </div>
+                </div>
+                <div class="comments__slide swiper-slide">
+                  <div class="comments__img-container">
+                    <img class="comments__img" src="./img/comments-slide-5.png" alt="image">
+                  </div>
+                </div>
+              </div>
+              <div 
+                class="
+                  page__arrow-button
+                  page__arrow-button--next
+                  swiper-button-next"
+              >
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -518,7 +667,7 @@
         <div 
           class="
             grid__item 
-            grid__item--desktop-7-8 
+            grid__item--desktop-8-9 
             grid__item--desktop-row-1-2"
         >
           <ul>
@@ -552,7 +701,7 @@
         <div 
           class="
             grid__item 
-            grid__item--desktop-9-10 
+            grid__item--desktop-10-11 
             grid__item--desktop-row-1-2"
         >
           <ul>
@@ -587,7 +736,7 @@
           class="
             footer__logo-block
             grid__item 
-            grid__item--desktop-10-11 
+            grid__item--desktop-11-12 
             grid__item--desktop-row-1-1"
         >
           <a class="footer__social-logo" href="https://instagram.com">
