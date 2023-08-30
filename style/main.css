@@ -476,7 +476,7 @@ p {
 }
 
 .logo {
-  background-image: url(../../img/favicon.svg);
+  background-image: "../../img/favicon.svg";
   background-repeat: no-repeat;
   background-size: contain;
   height: 32px;
@@ -485,7 +485,7 @@ p {
 .logo::after {
   content: "";
   display: block;
-  background-image: url(../..//img/TOPCLEAN.svgs);
+  background-image: "../../img/TOPCLEAN.svg";
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
@@ -605,6 +605,11 @@ p {
 }
 .price__block:nth-child(9) {
   margin-bottom: 60px;
+}
+.price__block--1 {
+  background-image: url(../../img/price-block/price-block-1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .price__block--2 {
   background: linear-gradient(157.34deg, #1D78DF 2.22%, rgba(29, 120, 223, 0) 218.96%);
