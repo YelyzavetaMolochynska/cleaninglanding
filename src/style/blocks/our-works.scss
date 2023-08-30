@@ -1,0 +1,75 @@
+.our-works {
+
+  &__swiper {
+    margin-bottom: 60px;
+  }
+
+  &__slide-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__image-container {
+    background-repeat: no-repeat;
+    background-size: auto;
+    height: 523px;
+    width: 418px;
+    display: flex;
+    align-items: end;
+    padding-left: 20px;
+
+    &--1 {
+      background-image: url(../../img/slide-1-before.png);
+    }
+
+    &--2 {
+      background-image: url(../../img/slide-1-after.png);
+    }
+
+    &--3 {
+      background-image: url(../../img/slide-2-before.png);
+    }
+
+    &--4 {
+      background-image: url(../../img/slide-2-after.png);
+    }
+
+    &--5 {
+      background-image: url(../../img/slide-3-before.png);
+    }
+
+    &--6 {
+      background-image: url(../../img/slide-3-after.png);
+    }
+
+    &--7 {
+      background-image: url(../../img/slide-4-before.png);
+    }
+
+    &--8 {
+      background-image: url(../../img/slide-4-after.png);
+    }
+
+    &--9 {
+      background-image: url(../../img/slide-5-before.png);
+    }
+
+    &--10 {
+      background-image: url(../../img/slide-5-after.png);
+    }
+
+    &--11 {
+      background-image: url(../../img/slide-6-before.png);
+    }
+
+    &--12 {
+      background-image: url(../../img/slide-6-after.png);
+    }
+  }
+
+  &__after {
+    background-color: $color-blue-button;
+    color: $color-text-white;
+  }
+}
