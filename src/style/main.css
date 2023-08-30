@@ -438,7 +438,7 @@ p {
   border-bottom: 2px solid #070707;
 }
 .header__text-block {
-  background-image: url(../../img/header.png);
+  background-image: url(../../img/header.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
@@ -446,6 +446,7 @@ p {
   height: 100%;
   z-index: -1;
   border-radius: 12px;
+  opacity: 1;
 }
 .header__title {
   padding-top: 198px;
@@ -484,7 +485,7 @@ p {
 .logo::after {
   content: "";
   display: block;
-  background-image: url(../../img/TOPCLEAN.svg);
+  background-image: url(../..//img/TOPCLEAN.svgs);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
