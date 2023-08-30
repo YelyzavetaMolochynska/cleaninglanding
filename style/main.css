@@ -476,7 +476,7 @@ p {
 }
 
 .logo {
-  background-image: "../../img/favicon.svg";
+  background: "../../../img/favicon.svg";
   background-repeat: no-repeat;
   background-size: contain;
   height: 32px;
@@ -485,7 +485,7 @@ p {
 .logo::after {
   content: "";
   display: block;
-  background-image: "../../img/TOPCLEAN.svg";
+  background-image: "../../../img/TOPCLEAN.svg";
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
