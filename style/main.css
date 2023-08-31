@@ -438,7 +438,7 @@ p {
   border-bottom: 2px solid #070707;
 }
 .header__text-block {
-  background-image: url(../../assets/img/header.svg);
+  background-image: "../../../assets/img/header.svg";
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
@@ -476,7 +476,7 @@ p {
 }
 
 .logo {
-  background-image: url(../../assets/img/favicon.svg);
+  background-image: "../../../assets/img/favicon.svg";
   background-repeat: no-repeat;
   background-size: contain;
   height: 32px;
@@ -485,7 +485,7 @@ p {
 .logo::after {
   content: "";
   display: block;
-  background-image: url(../../assets/img/TOPCLEAN.svg);
+  background-image: "../../../assets/img/TOPCLEAN.svg";
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
@@ -743,7 +743,7 @@ p {
   border: none;
   background-color: transparent;
   outline: none;
-  background-image: url(../../assets/img/plus-icon.svg);
+  background-image: "../../../assets/img/plus-icon.svg";
   background-repeat: no-repeat;
   background-position: center;
   height: 20px;
