@@ -438,7 +438,7 @@ p {
   border-bottom: 2px solid #070707;
 }
 .header__text-block {
-  background-image: "../../../assets/img/header.svg";
+  background-image: "../../assets/img/header.svg";
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
@@ -476,7 +476,7 @@ p {
 }
 
 .logo {
-  background-image: "../../../assets/img/favicon.svg";
+  background-image: "../../assets/img/favicon.svg";
   background-repeat: no-repeat;
   background-size: contain;
   height: 32px;
@@ -485,7 +485,7 @@ p {
 .logo::after {
   content: "";
   display: block;
-  background-image: "../../../assets/img/TOPCLEAN.svg";
+  background-image: "../../assets/img/TOPCLEAN.svg";
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
@@ -607,7 +607,7 @@ p {
   margin-bottom: 60px;
 }
 .price__block--1 {
-  background-image: url(../../assests/img/price-block/price-block-1.png);
+  background-image: "../../assests/img/price-block/price-block-1.png";
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -615,10 +615,10 @@ p {
   background: linear-gradient(157.34deg, #1D78DF 2.22%, rgba(29, 120, 223, 0) 218.96%);
 }
 .price__block--3 {
-  background-image: url(../../assets/img/price-block/price-block-3.png);
+  background-image: "../../assets/img/price-block/price-block-3.png";
 }
 .price__block--4 {
-  background-image: url(../../assets/img/price-block/price-block-4.png);
+  background-image: "../../assets/img/price-block/price-block-4.png";
 }
 .price__block--5 {
   background: #51a2d9;
@@ -627,13 +627,13 @@ p {
   background-color: #ba9349;
 }
 .price__block--7 {
-  background-image: url(../../assets/img/price-block/price-block-7.png);
+  background-image: "../../assets/img/price-block/price-block-7.png";
 }
 .price__block--8 {
   background: #9ACAF4;
 }
 .price__block--9 {
-  background-image: url(../../assets/img/price-block/price-block-9.png);
+  background-image: "../../assets/img/price-block/price-block-9.png";
 }
 .price__subtitle {
   color: #fff;

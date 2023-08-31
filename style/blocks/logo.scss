@@ -1,5 +1,5 @@
 .logo {
-  background-image: "../../../assets/img/favicon.svg";
+  background-image: "../../assets/img/favicon.svg";
   background-repeat: no-repeat;
   background-size: contain;
   height: 32px;
@@ -8,7 +8,7 @@
   &::after {
     content: '';
     display: block;
-    background-image: "../../../assets/img/TOPCLEAN.svg";
+    background-image: "../../assets/img/TOPCLEAN.svg";
     background-repeat: no-repeat;
     background-size: auto;
     background-position: center;
