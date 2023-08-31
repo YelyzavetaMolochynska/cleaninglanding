@@ -2,6 +2,11 @@
   width: 100vw;
   margin-bottom: 60px;
 
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+
   &__nav {
     padding-top: 40px;
     align-items: center;
@@ -40,23 +45,25 @@
   }
 
   &__text-block {
-    background-image: "../../assets/img/header.svg";
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
     border-radius: 12px;
-    opacity: 1;
+    position: relative;
+  }
+
+  &__img {
+    z-index: -1;
+    position: absolute;
   }
 
   &__title {
+    position: relative;
     padding-top: 198px;
     padding-bottom: 247px;
     padding-left: 115px;
     width: 512px;
     color: $color-text-white;
+    z-index: 3;
   }
 
   &__form-block {

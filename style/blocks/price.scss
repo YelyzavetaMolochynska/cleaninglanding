@@ -14,6 +14,7 @@
     border-radius: 8px;
     transition: transform 0.3s;
     margin-bottom: 30px;
+    z-index: -1;
 
     &:hover {
       transform: scale(110%);
@@ -23,22 +24,8 @@
       margin-bottom: 60px;
     }
 
-    &--1 {
-      background: "../../assests/img/price-block/price-block-1.png";
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-
     &--2 {
       background: linear-gradient(157.34deg, #1D78DF 2.22%, rgba(29, 120, 223, 0) 218.96%);
-    }
-
-    &--3 {
-      background: url(../../assets/img/price-block/price-block-3.png);
-    }
-
-    &--4 {
-      background: url(../../assets/img/price-block/price-block-4.png);
     }
 
     &--5 {
@@ -49,16 +36,8 @@
       background-color: $color-yellow;
     }
 
-    &--7 {
-      background: url(../../assets/img/price-block/price-block-7.png);
-    }
-
     &--8 {
       background: $color-light-blue;
-    }
-
-    &--9 {
-      background: url(../../assets/img/price-block/price-block-9.png);
     }
   }
 
@@ -66,16 +45,21 @@
     color: $color-text-white;
     margin-bottom: 20px;
     text-align: left;
+    z-index: 5;
   }
 
   &__image {
     position: absolute;
     top: 0;
     left: -2px;
-    z-index: 5;
+    z-index: 2;
 
     &--8 {
       top: 56px;
     }
+  }
+
+  &__price {
+    z-index: 5;
   }
 }
