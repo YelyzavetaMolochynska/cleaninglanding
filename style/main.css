@@ -717,7 +717,7 @@ p {
   border: none;
   background-color: transparent;
   outline: none;
-  background-image: url(../../../assets/img/plus-icon.svg);
+  background-image: url(../assets/img/plus-icon.svg);
   background-repeat: no-repeat;
   background-position: center;
   height: 20px;
