@@ -49,7 +49,7 @@
   
       &::after {
         box-shadow: 0px 4px 22px 0px #0000002E;
-        background-image: url(../../img/arrow-next.svg);
+        background-image: url(../../assets/img/arrow-next.svg);
       }
     }
   
@@ -58,7 +58,7 @@
   
       &::after {
         box-shadow: 0px 0px 22px 4px #0000002E;
-        background-image: url(../../img/arrow-next.svg);
+        background-image: url(../../assets/img/arrow-next.svg);
         transform: rotate(180deg);
       }
     }
