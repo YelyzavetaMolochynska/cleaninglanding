@@ -10,11 +10,19 @@
     align-items: left;
     padding-left: 30px;
     justify-content: end;
-    height: 492px;
+    max-height: 492px;
     border-radius: 8px;
     transition: transform 0.3s;
     margin-bottom: 30px;
     z-index: -1;
+
+    @include onTablet {
+      height: 378px;
+    }
+
+    @include onDesktop {
+      height: 492px;
+    }
 
     &:hover {
       transform: scale(110%);
@@ -46,6 +54,14 @@
     margin-bottom: 20px;
     text-align: left;
     z-index: 5;
+
+    @include onTablet {
+      font-size: 24px;
+    }
+
+    @include onDesktop {
+      font-size: 32px;
+    }
   }
 
   &__image {
@@ -53,6 +69,10 @@
     top: 0;
     left: -2px;
     z-index: 2;
+
+    @include onTablet {
+      width: 100%;
+    }
 
     &--8 {
       top: 56px;

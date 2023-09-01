@@ -7,17 +7,27 @@
   &__slide-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
+    margin: 0 100px 0 140px;
+
+    @include onDesktop {
+      margin: 0 100px 0 160px;
+    }
   }
 
   &__image-container {
     background-repeat: no-repeat;
-    background-size: auto;
-    height: 523px;
-    width: 418px;
+    background-size: contain;
+    height: 80vh;
+    width: 50vw;
     display: flex;
     align-items: end;
     padding-left: 20px;
+
+    @include onDesktop {
+      height: 90vh;
+    }
+
 
     &--1 {
       background-image: url(../assets/img/slides/slide-1-before.png);
@@ -71,5 +81,14 @@
   &__after {
     background-color: $color-blue-button;
     color: $color-text-white;
+  }
+
+  &__arrow-button {
+    
+    &--prev {
+      ::after {
+        transform: translateX(20px);
+      }
+    }
   }
 }
