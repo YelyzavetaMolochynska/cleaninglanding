@@ -1366,6 +1366,16 @@ p {
 .price__block:nth-child(11) {
   margin-bottom: 30px;
 }
+.price__block--phone {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+@media (min-width: 740px) {
+  .price__block--phone {
+    display: flex;
+  }
+}
 .price__block--2 {
   background: linear-gradient(157.34deg, #1D78DF 2.22%, rgba(29, 120, 223, 0) 218.96%);
 }

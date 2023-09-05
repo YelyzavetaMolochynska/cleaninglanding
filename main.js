@@ -65,3 +65,18 @@ plusButton.forEach((button, index) => {
     }
   });
 });
+
+const moreServiceButton = document.querySelector('.price__button-more');
+const allPriceBlocks = document.querySelectorAll('.price__block');
+const lastFourPriceBlocks = Array.from(allPriceBlocks).slice(-4);
+
+moreServiceButton.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  lastFourPriceBlocks.forEach((block) => {
+    block.style.display = 'flex';
+    block.style.opacity = '1';
+  });
+
+  moreServiceButton.style.display = 'none'
+})

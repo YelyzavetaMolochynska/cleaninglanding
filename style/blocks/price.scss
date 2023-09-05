@@ -45,6 +45,16 @@
       margin-bottom: 30px;
     }
 
+    &--phone {
+      display: none;
+      opacity: 0;
+      transition: opacity 1.0s ease;
+      
+      @include onTablet {
+        display: flex;
+      }
+    }
+
     &--2 {
       background: linear-gradient(157.34deg, #1D78DF 2.22%, rgba(29, 120, 223, 0) 218.96%);
     }
