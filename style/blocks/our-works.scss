@@ -1,33 +1,85 @@
 .our-works {
+  height: fit-content;
+  margin-bottom: 44px;
+
+  @include onTablet {
+    margin-bottom: 120px;
+  }
+
+  &__swiper-container {
+    height: 226px;
+
+    @include onLargePhone {
+      height: 300px;
+    }
+
+    @include onTablet {
+      height: fit-content;
+      margin-bottom: 40px;
+    }
+
+    @include onSmallDesktop {
+      height: 440px;
+    }
+
+    @include onDesktop {
+      height: 540px;
+    }
+  }
 
   &__swiper {
-    margin-bottom: 60px;
+    height: 100%;
+  }
+
+  &__swiper-wrapper {
+    height: 200px;
   }
 
   &__slide-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    margin: 0 100px 0 140px;
+    justify-content: center;
+    margin: 0 auto;
+
+    @include onTablet {
+      width: 600px;
+      gap: 10px;
+      height: min-content;
+    }
+
+    @include onSmallDesktop {
+      height: 580px;
+      width: 700px;
+    }
 
     @include onDesktop {
-      margin: 0 100px 0 160px;
+      width: 870px;
+      height: 730px;
     }
   }
 
   &__image-container {
+    position: relative;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 80vh;
+    height: 170px;
     width: 50vw;
     display: flex;
-    align-items: end;
-    padding-left: 20px;
+    border-radius: 8px;
 
-    @include onDesktop {
-      height: 90vh;
+    @include onLargePhone {
+      height: 238px;
     }
 
+    @include onTablet {
+      height: 290px;
+      width: 230px;
+    }
+
+    @include onSmallDesktop {
+      height: 78%;
+      width: 100%;
+    }
 
     &--1 {
       background-image: url(../assets/img/slides/slide-1-before.png);
@@ -89,6 +141,39 @@
       ::after {
         transform: translateX(20px);
       }
+    }
+  }
+
+  &__before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    @include onTablet {
+      bottom: 20px;
+      left: 20px;
+    }
+
+  }
+
+  &__after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    @include onTablet {
+      bottom: 20px;
+      left: 20px;
+    }
+  }
+
+  &__button {
+    display: none;
+
+    @include onTablet {
+      display: flex;
+      width: 100%;
+      justify-content: center;
     }
   }
 }

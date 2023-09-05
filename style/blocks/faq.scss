@@ -1,22 +1,37 @@
 .faq {
-  margin-bottom: 114px;
+
+  @include onTablet { 
+    margin-bottom: 80px;
+  }
+
+  @include onSmallDesktop {
+    margin-bottom: 114px;
+  }
 
   &__questions {
     width: 100%;
     height: fit-content;
-    border: 1px solid transparent;
-    background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 6px, transparent 6px) 0% 0%/8px 8px no-repeat,
-      radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 6px, transparent 6px) 100% 0%/8px 8px no-repeat,
-      radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 6px, transparent 6px) 0% 100%/8px 8px no-repeat,
-      radial-gradient(circle at 0 0, #ffffff 0, #ffffff 6px, transparent 6px) 100% 100%/8px 8px no-repeat,
-      linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 4px) calc(100% - 16px) no-repeat,
-      linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 16px) calc(100% - 4px) no-repeat,
-      linear-gradient(255deg, #8ca3c7 100%, #8d8f93 36%);
-    border-radius: 8px;
-    box-shadow: 0px 4px 24px 0px #22222212;
     display: flex;
     flex-direction: column;
-    padding: 60px;
+    box-sizing: border-box;
+
+    @include onTablet {
+      border: 1px solid transparent;
+      background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 6px, transparent 6px) 0% 0%/8px 8px no-repeat,
+        radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 6px, transparent 6px) 100% 0%/8px 8px no-repeat,
+        radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 6px, transparent 6px) 0% 100%/8px 8px no-repeat,
+        radial-gradient(circle at 0 0, #ffffff 0, #ffffff 6px, transparent 6px) 100% 100%/8px 8px no-repeat,
+        linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 4px) calc(100% - 16px) no-repeat,
+        linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 16px) calc(100% - 4px) no-repeat,
+        linear-gradient(255deg, #8ca3c7 100%, #8d8f93 36%);
+      border-radius: 8px;
+      box-shadow: 0px 4px 24px 0px #22222212;
+      padding: 20px 20px;
+    }
+
+    @include onSmallDesktop {
+      padding: 60px 60px;
+    }
   }
 
   &__question-block {
@@ -26,7 +41,11 @@
 
     &--last {
       border-bottom: 1px solid #00000099;
-      margin-bottom: 60px;
+      margin-bottom: 30px;
+
+      @include onSmallDesktop {
+        margin-bottom: 60px;
+      }
     }
   }
 
@@ -35,25 +54,59 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 10px 0;
+
+    @include onTablet {
+      padding: 10px 0;
+    }
+
+    @include onSmallDesktop {
+      padding: 20px 0;
+    }
+  }
+
+  &__question {
+    font-size: 18px;
+    line-height: 27px;
+    width: 238px;
+
+    @include onTablet {
+      width: 80%;
+    }
+
+    @include onSmallDesktop {
+      font-size: 26px;
+      line-height: 39px;
+    }
   }
 
   &__button {
     border: none;
     background-color: transparent;
     outline: none;
-    background-image: url(../assets/img/plus-icon.svg);
+    background-image: url(../assets/img/plus-icon.png);
     background-repeat: no-repeat;
     background-position: center;
-    height: 20px;
-    width: 20px;
+    height: 16px;
+    width: 16px;
     transition: background-image 0.3s ease-in-out;
     cursor: pointer;
+
+    @include onTablet {
+      height: 20px;
+      width: 20px;
+    }
   }
 
   &__form-link {
-    text-align: right;
+    text-align: center;
     color: $color-black-text;
+    margin-bottom: 20px;
+
+    @include onTablet {
+      text-align: right;
+      margin-bottom: 0;
+    }
   }
 
   &__answer {
@@ -62,5 +115,14 @@
     max-height: 0;
     opacity: 0;
     margin-bottom: 40px;
+  }
+
+  &__order-button {
+    display: flex;
+    justify-content: center;
+
+    @include onTablet {
+      display: none;
+    }
   }
 }

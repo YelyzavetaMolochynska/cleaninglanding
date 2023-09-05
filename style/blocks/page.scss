@@ -4,31 +4,68 @@
   color: $color-black-text;
 
   &__section {
-    margin-bottom: 180px;
+    margin-bottom: 60px;
+
+    @include onSmallDesktop {
+      margin-bottom: 140px;
+    }
+
+    @include onDesktop {
+      margin-bottom: 180px;
+    }
   }
 
   &__title {
+    font-size: 30px;
     text-align: center;
-    line-height: 64px;
-    margin-bottom: 20px;
+    line-height: 32px;
+    margin-bottom: 10px;
+
+    @include onSmallDesktop {
+      font-size: 52px;
+      line-height: 64px;
+      margin-bottom: 20px;
+    }
+
+    @include onDesktop {
+      font-size: 60px;
+      line-height: 64px;
+      margin-bottom: 20px;
+    }
   }
 
   &__paragraph {
     text-align: center;
     color: $color-dark-grey-text;
-    font-size: 18px;
-    margin-bottom: 40px;
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 20px;
+
+
+    @include onSmallDesktop {
+      font-size: 18px;
+      margin-bottom: 40px;
+      line-height: 27px;
+    }
   }
 
   &__white-background-text {
-    font-size: 18px;
+    font-size: 14px;
     background-color: $color-text-white;
     border-radius: 8px;
     width: fit-content;
-    padding: 0 10px;
-    line-height: 27px;
+    padding: 0 6px;
+    line-height: 18px;
     text-align: center;
-    margin-bottom: 28px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+
+    @include onSmallDesktop {
+      font-size: 18px;
+      line-height: 27px;
+      padding: 0 10px;
+      margin-bottom: 28px;
+    }
   }
 
   &__arrow-button {
@@ -39,10 +76,20 @@
     &::after {
       content: '';
       background-repeat: no-repeat;
-      width: 82px;
-      height: 82px;
+      width: 32px;
+      height: 32px;
       background-position: center;
       border-radius: 50%;
+
+      @include onTablet {
+        width: 62px;
+        height: 62px;
+      }
+
+      @include onSmallDesktop {
+        width: 82px;
+        height: 82px;
+      }
     }
 
     &--next {
@@ -50,7 +97,22 @@
       &::after {
         box-shadow: 0px 4px 22px 0px #0000002E;
         background-image: url(../assets/img/arrow-next.svg);
-        transform: translateX(-10px);
+        background-size: 9px;
+        transform: translate(-4px, 82px);
+
+        @include onLargePhone {
+          transform: translate(-4px, 118px);
+        }
+
+        @include onTablet {
+          background-size: 16px;
+          transform: translate(-10px, -40px);
+        }
+
+        @include onSmallDesktop {
+          background-size: 22px;
+          transform: translateX(-10px);
+        }
       }
     }
   
@@ -60,7 +122,22 @@
       &::after {
         box-shadow: 0px 0px 22px 4px #0000002E;
         background-image: url(../assets/img/arrow-next.svg);
-        transform: rotate(180deg) translateX(-10px);
+        background-size: 9px;
+        transform: translate(4px, 82px) rotate(180deg);
+
+        @include onLargePhone {
+          transform: translate(-4px, 118px) rotate(180deg);
+        }
+
+        @include onTablet {
+          background-size: 16px;
+          transform: rotate(180deg) translate(-10px, 40px);
+        }
+
+        @include onSmallDesktop {
+          background-size: 22px;
+          transform: rotate(180deg) translateX(-10px);
+        }
       }
     }
   }

@@ -1,22 +1,31 @@
 .price {
-  &__paragraph {
-    margin-bottom: 40px;
-  }
 
   &__block {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: left;
-    padding-left: 30px;
-    justify-content: end;
-    max-height: 492px;
     border-radius: 8px;
     transition: transform 0.3s;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     z-index: -1;
+    height: 176px;
+    width: 100%;
+
+    @include onLargePhone {
+      height: 240px;
+    }
 
     @include onTablet {
+      height: 240px;
+    }
+
+    @include onSmallDesktop {
+      height: 348px;
+      margin-bottom: 30px;
+    }
+
+    @include onDesktop {
       height: 378px;
     }
 
@@ -29,7 +38,11 @@
     }
 
     &:nth-child(9) {
-      margin-bottom: 60px;
+      margin-bottom: 10px;
+    }
+
+    &:nth-child(11) {
+      margin-bottom: 30px;
     }
 
     &--2 {
@@ -42,44 +55,131 @@
 
     &--6 {
       background-color: $color-yellow;
+      margin-bottom: 30px;
+
+      @include onTablet {
+        margin-bottom: inherit;
+      }
     }
 
     &--8 {
       background: $color-light-blue;
+      margin-bottom: 10px;
+
+      @include onTablet {
+        margin-bottom: inherit;
+      }
     }
   }
 
   &__subtitle {
     color: $color-text-white;
-    margin-bottom: 20px;
+    margin: auto 15px 10px 10px;
     text-align: left;
     z-index: 5;
+    font-size: 14px;
+    line-height: 18px;
 
-    @include onTablet {
+    @include onSmallDesktop {
+      margin-bottom: 20px;
       font-size: 24px;
+      line-height: 32px;
     }
 
     @include onDesktop {
       font-size: 32px;
+      line-height: 41px;
+      margin-left: 33px;
     }
   }
 
-  &__image {
-    position: absolute;
-    top: 0;
-    left: -2px;
+  &__image-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
     z-index: 2;
+    position: absolute;
+  }
 
-    @include onTablet {
+  &__image {
+    width: 100%;
+    height: 100%;
+
+    @include onDesktop {
       width: 100%;
     }
 
+    &--phone {
+      display: block;
+
+      @include onTablet {
+        display: none;
+      }
+    }
+
+    &--phone-2 {
+      width: 60%;
+      height: 60%;
+    }
+
+    &--5 {
+      width: 70%;
+      height: 70%;
+      margin: 0 auto;
+
+      @include onTablet {
+        width: 100%;
+        height: 80%;
+      }
+    }
+
+    &--6 {
+      width: 90%;
+      height: 70%;
+      margin: 0 auto;
+
+      @include onTablet {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
     &--8 {
-      top: 56px;
+      width: 90%;
+      height: 50%;
+      margin-top: 10px;
+    }
+
+    &--desktop {
+      display: none;
+
+      @include onTablet {
+        display: flex;
+      }
     }
   }
 
   &__price {
     z-index: 5;
+
+    @include onDesktop {
+      margin-left: 33px;
+    }
+  }
+
+  &__button-more {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    line-height: 21px;
+    border-bottom: 1px solid $color-black-text;
+    background-color: transparent;
+    width: fit-content;
+    margin: 0 auto 20px;
+    display: flex;
+
+    @include onTablet {
+      display: none;
+    }
   }
 }

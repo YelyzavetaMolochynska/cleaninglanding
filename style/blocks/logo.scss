@@ -1,0 +1,17 @@
+.logo {
+  &--phone {
+    display: flex;
+
+    @include onSmallDesktop {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    display: none;
+
+    @include onSmallDesktop {
+      display: flex;
+    }
+  }
+}

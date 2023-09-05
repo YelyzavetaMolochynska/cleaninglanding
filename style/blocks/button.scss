@@ -2,12 +2,16 @@
   border-radius: 8px;
   background-color: $color-blue-button;
   color: $color-text-white;
-  padding: 16px 0;
+  padding: 10px 0;
   font-family: inherit;
   font-size: 16px;
   transition: background-color 0.3s;
   text-decoration: none;
   text-align: center;
+
+  @include onDesktop {
+    padding: 16px 0;
+  }
 
   &:hover {
     background-color: $color-black-text

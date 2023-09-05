@@ -1,23 +1,32 @@
 .comments {
-  margin-bottom: 200px;
+
+  @include onDesktop {
+    margin-bottom: 200px;
+  }
 
   &__title-block {
-    padding: 140px 112px 140px 110px;
-    background: linear-gradient(183.41deg, rgba(237, 242, 250, 0.98) -53.98%, rgba(237, 242, 250, 0) 97.18%);    display: flex;
     flex-direction: column;
     align-items: center;
     margin: auto 0;
+    display: flex;
 
     @include onTablet {
+      padding: 30px 50px;
+      background: linear-gradient(183.41deg, rgba(237, 242, 250, 0.98) -53.98%, rgba(237, 242, 250, 0) 97.18%);
+    }
+
+    @include onSmallDesktop {
       padding: 80px 60px;
     }
   }
 
   &__title {
-    margin-bottom: 20px;
+    font-size: 30px;
+    margin-bottom: 10px;
     text-align: center;
 
-    @include onTablet {
+    @include onDesktop {
+      margin-bottom: 20px;
       font-size: 48px;
     }
 
@@ -27,19 +36,71 @@
   }
 
   &__paragraph {
-    margin-bottom: 60px;
-    text-align: left;
+    margin-bottom: 20px;
+    text-align: center;
+
+    @include onDesktop {
+      margin-bottom: 60px;
+      text-align: left;
+    }
   }
 
   &__button {
     width: 100%;
+    display: none;
+
+    @include onTablet {
+      display: block;
+    }
+
+    &--phone {
+      display: block;
+
+      @include onTablet {
+        display: none;
+      }
+    }
+  }
+
+  &__swiper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__slide {
+    height: fit-content;
   }
 
   &__img-container {
-    margin: 0 60px 0 110px;
+    height: 400px;
+    width: 200px;
+    margin: 0 auto 0 auto;
+
+    @include onSmallDesktop {
+      height: 584px;
+      width: 280px;
+    }
+
+    @include onDesktop {
+      width: 400px;
+      height: 760px;
+    }
   }
 
   &__img {
     width: 100%;
+    transform: translateX(10px);
+  }
+
+  &__arrow-button {
+    &::after {
+      transform: translateY(-34px);
+    }
+
+    &--prev {
+      &::after {
+        transform: translateY(-34px) rotate(180deg);
+      }
+    }
   }
 }
