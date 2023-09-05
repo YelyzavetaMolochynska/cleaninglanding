@@ -79,4 +79,38 @@ moreServiceButton.addEventListener('click', (e) => {
   });
 
   moreServiceButton.style.display = 'none'
-})
+});
+
+function startCounter(element, target) {
+  let count = 0;
+  const speed = 50; 
+
+  const updateCounter = () => {
+    const increment = target / speed;
+    if (count < target) {
+      count += increment;
+      element.innerText = Math.ceil(count);
+      requestAnimationFrame(updateCounter); 
+    } else {
+      element.innerText = target;
+    }
+  };
+
+  updateCounter();
+}
+
+const counterBlocks = document.querySelectorAll('.counter__block');
+
+// Функція, яка запускає лічильник для всіх блоків
+function animateCounters() {
+  counterBlocks.forEach((counterBlock) => {
+    const counterTitle = counterBlock.querySelector('.counter__title');
+    const counterNumber = counterTitle.querySelector('.counter__number');
+    const target = parseInt(counterNumber.getAttribute('data-target'));
+
+    startCounter(counterNumber, target);
+  });
+}
+
+window.addEventListener('load', animateCounters);
+

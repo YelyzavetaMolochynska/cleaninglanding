@@ -90,16 +90,28 @@
   &__img {
     width: 100%;
     transform: translateX(10px);
+
+    @include onSmallDesktop {
+      transform: translateX(24px);
+    }
   }
 
   &__arrow-button {
     &::after {
       transform: translateY(-34px);
+
+      @include onSmallDesktop {
+        transform: translate(-18px, -34px);
+      }
     }
 
     &--prev {
       &::after {
         transform: translateY(-34px) rotate(180deg);
+
+        @include onSmallDesktop {
+          transform: translate(18px, -34px) rotate(180deg);
+        }
       }
     }
   }
