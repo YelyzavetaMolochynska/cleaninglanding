@@ -41,7 +41,7 @@ plusButton.forEach((button, index) => {
 
     if (!isExpanded) {
       button.classList.add('expanded');
-      button.style.backgroundImage = "url('../assets/img/minus-icon.png')";
+      button.style.backgroundImage = "url(../assets/img/minus-icon.png)";
 
       const answerBlock = document.createElement('p');
       answerBlock.textContent = answers[index];
@@ -54,7 +54,7 @@ plusButton.forEach((button, index) => {
       }, 0);
     } else {
       button.classList.remove('expanded');
-      button.style.backgroundImage = "url('../assets/img/plus-icon.png')";
+      button.style.backgroundImage = "url(../assets/img/plus-icon.png)";
 
       const answerBlock = questionBlock[index].nextElementSibling;
       if (answerBlock) {
