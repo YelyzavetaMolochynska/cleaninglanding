@@ -3,6 +3,14 @@
   scroll-behavior: smooth;
   color: $color-black-text;
 
+  &__body {
+    margin: 0;
+
+    &--with-menu {
+      overflow: hidden;
+    }
+  }
+
   &__section {
     margin-bottom: 60px;
 
@@ -12,6 +20,22 @@
 
     @include onDesktop {
       margin-bottom: 180px;
+    }
+  }
+
+  &__menu {
+    background-color: transparent;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+
+    &:target {
+      transform: translateX(0);
     }
   }
 
