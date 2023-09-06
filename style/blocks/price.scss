@@ -12,6 +12,10 @@
     height: 176px;
     width: 100%;
 
+    &:hover {
+      transform: scale(110%);
+    }
+
     @include onLargePhone {
       height: 240px;
     }
@@ -31,10 +35,6 @@
 
     @include onDesktop {
       height: 492px;
-    }
-
-    &:hover {
-      transform: scale(110%);
     }
 
     &:nth-child(9) {
@@ -133,6 +133,10 @@
       height: 60%;
     }
 
+    &--2 {
+      transform: translate(-2px, -1px);
+    }
+
     &--5 {
       width: 70%;
       height: 70%;
@@ -157,8 +161,9 @@
 
     &--8 {
       width: 90%;
-      height: 50%;
-      margin-top: 10px;
+      height: 40%;
+      margin-top: 70px;
+      margin-left: 14px;
     }
 
     &--desktop {
