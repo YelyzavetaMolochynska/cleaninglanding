@@ -259,9 +259,19 @@
   &__input {
     padding: 10px 15px;
     outline: none;
+    border: none;
+    box-sizing: border-box;
     border-radius: 8px;
     border: 1px solid #ddd;
+    outline: none;
     margin-bottom: 10px;
+    font-size: 14px;
+
+    &:hover {
+      outline: none;
+      border: none;
+      border-bottom: 1px solid $color-black-text;
+    }
 
     @include onSmallDesktop {
       padding: 16px;
@@ -282,6 +292,19 @@
 
     &:hover {
       border: 1px solid $color-black-text;
+    }
+
+    &:focus {
+      border-color: $color-black-text;
+      outline: none;
+    }
+
+    // &:valid {
+    //   border-color: #3fBf82;
+    // }
+
+    &:invalid {
+      border-color: #d94c35;
     }
   }
 

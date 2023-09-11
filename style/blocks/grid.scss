@@ -24,6 +24,7 @@
   &--not-phone {
     display: flex;
     flex-direction: column;
+    height: min-content;
 
     @include onTablet {
       display: grid;

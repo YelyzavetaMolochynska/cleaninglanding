@@ -76,6 +76,11 @@
     width: 200px;
     margin: 0 auto 0 auto;
 
+    @include onLargePhone {
+      width: 75%;
+      height: auto;
+    }
+
     @include onSmallDesktop {
       height: 584px;
       width: 280px;
@@ -91,6 +96,10 @@
     width: 100%;
     transform: translateX(10px);
 
+    @include onLargePhone {
+      transform: translateX(18px);
+    }
+
     @include onSmallDesktop {
       transform: translateX(24px);
     }
@@ -98,7 +107,7 @@
 
   &__arrow-button {
     &::after {
-      transform: translateY(-34px);
+      transform: translate(-2px, -34px);
 
       @include onSmallDesktop {
         transform: translate(-18px, -34px);
@@ -107,7 +116,7 @@
 
     &--prev {
       &::after {
-        transform: translateY(-34px) rotate(180deg);
+        transform: translate(4px, -34px) rotate(180deg);
 
         @include onSmallDesktop {
           transform: translate(18px, -34px) rotate(180deg);
