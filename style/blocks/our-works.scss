@@ -7,11 +7,11 @@
   }
 
   &__swiper-container {
-    display: block;
+    display: flex;
     height: 226px;
 
     @include onLargePhone {
-      height: 282px;
+      height: 302px;
     }
 
     @include onTablet {
@@ -65,12 +65,12 @@
     background-repeat: no-repeat;
     background-size: contain;
     height: 170px;
-    width: 50vw;
+    width: 100%;
     display: flex;
     border-radius: 8px;
 
     @include onLargePhone {
-      height: 214px;
+      height: 232px;
     }
 
     @include onTablet {

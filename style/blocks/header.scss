@@ -17,7 +17,7 @@
     margin-bottom: 38px;
 
     @include onLargePhone {
-      margin-bottom: 64px;
+      margin-bottom: 82px;
     }
 
     @include onTablet {
@@ -166,8 +166,8 @@
     align-items: baseline;
 
     @include onLargePhone {
-      font-size: 32px;
-      line-height: 40px;
+      font-size: 28px;
+      line-height: 130%;
       margin-bottom: 136px;
       width: 75%;
     }
@@ -223,6 +223,10 @@
     font-size: 18px;
     line-height: 27px;
     margin-bottom: 5px;
+
+    @include onLargePhone {
+      font-size: 20px;
+    }
 
     @include onSmallDesktop {
       font-size: 24px;

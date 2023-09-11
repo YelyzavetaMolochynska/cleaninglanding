@@ -114,7 +114,8 @@
   &__logo-block {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 30px;
     margin-bottom: 15px;
 
     @include onTablet {

@@ -13,10 +13,6 @@
     height: max-content;
     width: 100%;
 
-    &:hover {
-      transform: scale(110%);
-    }
-
     @include onLargePhone {
       height: 240px;
     }
@@ -28,6 +24,10 @@
     @include onSmallDesktop {
       height: 348px;
       margin-bottom: 30px;
+
+      &:hover {
+        transform: scale(110%);
+      }
     }
 
     @include onDesktop {
@@ -90,7 +90,11 @@
     text-align: left;
     z-index: 5;
     font-size: 14px;
-    line-height: 18px;
+    line-height: 130%;
+
+    @include onLargePhone {
+      font-size: 16px;
+    }
 
     @include onSmallDesktop {
       margin-bottom: 20px;
@@ -187,6 +191,7 @@
 
   &__button-more {
     border: none;
+    color: $color-black-text;
     outline: none;
     font-size: 14px;
     line-height: 21px;

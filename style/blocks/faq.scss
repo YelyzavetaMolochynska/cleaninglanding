@@ -16,14 +16,7 @@
     box-sizing: border-box;
 
     @include onTablet {
-      border: 1px solid transparent;
-      background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 6px, transparent 6px) 0% 0%/8px 8px no-repeat,
-        radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 6px, transparent 6px) 100% 0%/8px 8px no-repeat,
-        radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 6px, transparent 6px) 0% 100%/8px 8px no-repeat,
-        radial-gradient(circle at 0 0, #ffffff 0, #ffffff 6px, transparent 6px) 100% 100%/8px 8px no-repeat,
-        linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 4px) calc(100% - 16px) no-repeat,
-        linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 16px) calc(100% - 4px) no-repeat,
-        linear-gradient(255deg, #8ca3c7 100%, #8d8f93 36%);
+      border: 1px solid $color-dark-grey-text;
       border-radius: 8px;
       box-shadow: 0px 4px 24px 0px #22222212;
       padding: 20px 20px;
@@ -41,11 +34,6 @@
 
     &--last {
       border-bottom: 1px solid #00000099;
-      margin-bottom: 30px;
-
-      @include onSmallDesktop {
-        margin-bottom: 60px;
-      }
     }
   }
 
@@ -69,6 +57,7 @@
     font-size: 18px;
     line-height: 27px;
     width: 238px;
+    font-weight: 400;
 
     @include onTablet {
       width: 80%;

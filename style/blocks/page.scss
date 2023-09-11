@@ -74,21 +74,24 @@
   }
 
   &__white-background-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 14px;
     background-color: $color-text-white;
     border-radius: 8px;
     width: fit-content;
     padding: 0 6px;
-    line-height: 18px;
+    height: 24px;
     text-align: center;
     margin-left: 10px;
     margin-bottom: 10px;
 
     @include onSmallDesktop {
       font-size: 18px;
-      line-height: 27px;
       padding: 0 10px;
       margin-bottom: 28px;
+      height: 30px;
     }
   }
 
@@ -129,10 +132,8 @@
         background-size: 9px;
         transform: translate(-4px, 82px);
 
-        
-
         @include onLargePhone {
-          transform: translate(-6px, 104px);
+          transform: translate(-6px, 120px);
         }
 
         @include onTablet {
@@ -157,7 +158,7 @@
         transform: translate(4px, 82px) rotate(180deg);
 
         @include onLargePhone {
-          transform: translate(6px, 106px) rotate(180deg);
+          transform: translate(6px, 120px) rotate(180deg);
         }
 
         @include onTablet {
