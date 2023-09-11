@@ -1,5 +1,5 @@
 @mixin onLargePhone {
-  @media (min-width: 424px) {
+  @media (min-width: 385px) {
     @content;
   }
 }

@@ -132,7 +132,7 @@
         
 
         @include onLargePhone {
-          transform: translate(-4px, 118px);
+          transform: translate(-6px, 104px);
         }
 
         @include onTablet {
@@ -157,7 +157,7 @@
         transform: translate(4px, 82px) rotate(180deg);
 
         @include onLargePhone {
-          transform: translate(-4px, 118px) rotate(180deg);
+          transform: translate(6px, 106px) rotate(180deg);
         }
 
         @include onTablet {

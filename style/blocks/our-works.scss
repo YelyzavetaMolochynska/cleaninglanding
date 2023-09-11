@@ -7,10 +7,11 @@
   }
 
   &__swiper-container {
+    display: block;
     height: 226px;
 
     @include onLargePhone {
-      height: 300px;
+      height: 282px;
     }
 
     @include onTablet {
@@ -40,6 +41,7 @@
     flex-direction: row;
     justify-content: center;
     margin: 0 auto;
+    gap: 10px;
 
     @include onTablet {
       width: 600px;
@@ -68,7 +70,7 @@
     border-radius: 8px;
 
     @include onLargePhone {
-      height: 238px;
+      height: 214px;
     }
 
     @include onTablet {
