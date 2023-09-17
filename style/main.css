@@ -1430,7 +1430,6 @@ p {
 .price__block--phone {
   display: none;
   opacity: 0;
-  transition: opacity 1s ease;
 }
 @media (min-width: 740px) {
   .price__block--phone {
@@ -1493,7 +1492,7 @@ p {
   display: block;
   width: 100%;
   height: 100%;
-  z-index: 2;
+  z-index: 1;
   position: absolute;
 }
 .price__image {
@@ -1590,6 +1589,14 @@ p {
 @media (min-width: 740px) {
   .our-works {
     margin-bottom: 120px;
+  }
+}
+.our-works__title {
+  margin-bottom: 20px;
+}
+@media (min-width: 740px) {
+  .our-works__title {
+    margin-bottom: 40px;
   }
 }
 .our-works__swiper-container {

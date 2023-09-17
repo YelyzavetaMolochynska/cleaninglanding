@@ -32,6 +32,7 @@ const swiperComments = new Swiper('.comments__swiper', {
   speed: 900,
 });
 
+
 const plusButton = document.querySelectorAll('.faq__button');
 const questionBlock = document.querySelectorAll('.faq__question-container');
 const answers = [
@@ -39,7 +40,7 @@ const answers = [
   `Тривалість чистки залежить від об'єму роботи, в середньому - це від однієї до трьох годин`,
   `Ціна наданих послуг , залежить від об'єму виконаної роботи. Прейскурант ви можете знайти на сайті. Додаткові послуги обговорюються напряму з клієнтом.`,
   'При хімчистці меблів ми використовуємо сертифіковану хімію TM ERA111 , виробником якої є Туреччина.',
-  'Оплата проводиться в готівковій та безготівковій формі(переказ з карти на карту).',
+  'Оплата виконується переводом на рахунок ФОП і готівкою',
   'Тривалість висихання до стану, готового для експлуатації становить від 6-18 годин.',
 ];
 
@@ -124,3 +125,80 @@ function animateCounters() {
 
 window.addEventListener('load', animateCounters);
 
+const form = document.querySelector('.header__form');
+const phoneInput = document.querySelector('input[type="tel"]');
+const nameInput = document.querySelector('input[type="text"]');
+const submitButton = document.querySelector('.header__button');
+
+form.addEventListener('submit', function (event) {
+  event.preventDefault();
+  
+  const phone = phoneInput.value;
+  const name = nameInput.value;
+  
+  phoneInput.classList.remove('invalid');
+  nameInput.classList.remove('invalid');
+  
+  if (!phone || !name) {
+    if (!phone) {
+      phoneInput.classList.add('invalid');
+    }
+    if (!name) {
+      nameInput.classList.add('invalid');
+    }
+    
+    alert('Заповніть всі поля форми');
+    return;
+  }
+  
+  // Оновіть цей URL на ваш сервер або сервер, який обробляє дані форми
+  const serverUrl = 'http://localhost:3000';
+  
+  fetch(serverUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ phone, name }),
+  })
+    .then(response => {
+      if (response.ok) {
+        alert('Дані успішно відправлені');
+        form.reset();
+      } else {
+        alert('Помилка при відправці даних');
+      }
+    })
+    .catch(error => {
+      console.error('Помилка: ', error);
+    });
+  
+  const telegramBotToken = '6642633947:AAHGhbzVGXD8pVfhtbbAFGDil-NdkpctAoQ';
+  const chatId = '272650225';
+  const message = 'Ваше повідомлення';
+
+  const apiUrl = `https://api.telegram.org/bot${telegramBotToken}/sendMessage`;
+
+  const data = {
+    chat_id: chatId,
+    text: message,
+  };
+
+  fetch(apiUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+    .then(response => {
+      if (response.ok) {
+        console.log('Повідомлення відправлено успішно');
+      } else {
+        console.error('Помилка при відправці повідомлення');
+      }
+    })
+    .catch(error => {
+      console.error('Помилка: ', error);
+    });
+});

@@ -13,7 +13,7 @@
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
   />
-  <script src="./main.js" defer></script>
+  <script type="module" src="./script/main.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </head>
 <body class="page__body">
@@ -88,9 +88,9 @@
         <h1 class="header__title">
           Top clean - ваша чистота, наша відповідальність!
         </h1>
-        <form class="header__form" action="#get">
+        <form class="header__form" method="#post">
           <h5 class="header__subtitle">
-            Залиш заявку і <br> зателефонуєм через 15 хв
+            Залиши заявку і ми <br> зателефонуємо через 15 хв
           </h5>
           <p class="header__paragraph">
             Проведемо консультацію по вашому питанню безкоштовно та по ділу.
@@ -165,7 +165,7 @@
                 <path d="M14.9328 23.3333V14.8186H17.7908L18.2187 11.5002H14.9328V9.38155C14.9328 8.42083 15.1996 7.76605 16.5774 7.76605L18.3346 7.76524V4.79736C18.0305 4.75707 16.9875 4.66675 15.7741 4.66675C13.2406 4.66675 11.5061 6.21311 11.5061 9.05308V11.5003H8.64062V14.8186H11.506V23.3334L14.9328 23.3333Z" fill="white"/>
               </svg>
             </a>
-            <a class="menu__social-logo" href="https://t.me">
+            <a class="menu__social-logo" href="https://t.me/alexhavr">
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="28" height="28" rx="14" fill="#419FD9"/>
                 <rect width="28" height="28" rx="14" fill="black"/>
@@ -608,11 +608,8 @@
               grid__item--desktop-4-9"
           >
             <h1 class="our-works__title page__title">
-              Вже зробили чисто
+              Наші роботи
             </h1>
-            <p class="our-works__paragraph page__paragraph">
-              Наша служба виїзної хімчистки дарує меблям та авто  нове дихання. Залишаючи за собою тильки радість від чистоти.
-            </p>
           </div>
           <div 
             class="
@@ -1072,7 +1069,7 @@
               </g>
             </svg>
           </a>
-          <a class="footer__social-logo" href="https://t.me">
+          <a class="footer__social-logo" href="https://t.me/alexhavr">
             <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g id="Telegram">
               <g id="Telegram_2">
@@ -1107,6 +1104,7 @@
     </div>
 
   </footer>
+  <script type="module" src="./script/main.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </body>
 </html>
