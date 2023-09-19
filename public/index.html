@@ -88,24 +88,36 @@
         <h1 class="header__title">
           Top clean - ваша чистота, наша відповідальність!
         </h1>
-        <form class="header__form" method="#post">
+        <form class="header__form form" method="#post">
           <h5 class="header__subtitle">
             Залиши заявку і ми <br> зателефонуємо через 15 хв
           </h5>
           <p class="header__paragraph">
             Проведемо консультацію по вашому питанню безкоштовно та по ділу.
           </p>
-          <input 
-            type="tel"
-            placeholder="Телефон"
-            class="header__input"
-          >
-          <input 
-            type="text"
-            placeholder="Ваше Ім`я"
-            class="header__input header__input--last"
-          >
-          <button class="header__button button">
+          <label for="tel" class="form__input-label">
+            <input 
+              type="tel"
+              placeholder="Телефон"
+              class="form__input"
+              id="phone-input"
+            >
+            <span class="form__input-error" id="phone-error">
+              Неправильний номер телефону
+            </span>
+          </label>
+          <label for="text" class="form__input-label form__input-label--last">
+            <input 
+              type="text"
+              placeholder="Ваше Ім`я"
+              class="form__input header__input"
+            >
+            <span class="form__input-error" id="name-error">
+              Введіть ім'я
+            </span>
+          </label>
+
+          <button class="form__button button">
             Замовити
           </button>
         </form>
@@ -184,7 +196,7 @@
     </div>
   </nav>
   <main>
-    <div class="counter page__section">
+    <!-- <div class="counter page__section">
       <div class="container">
         <div class="grid">
           <div 
@@ -249,7 +261,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="about-us page__section" id="about-us">
       <div class="container">
@@ -316,9 +328,6 @@
             <h1 class="price__title page__title">
               Зробимо для вас
             </h1>
-            <p class="price__paragraph page__paragraph">
-              Блаженство чистоти: свіжість меблів, блиск салону авто та омріяний порядок вдома.
-            </p>
           </div>
           <div 
             class="
@@ -758,9 +767,6 @@
             <h1 class="faq__title page__title">
               Часто питають
             </h1>
-            <p class="faq__paragraph page__paragraph">
-              Роз'яснюємо найбільш поширені питання. Отримайте видповіді, які вас цікавлять або залишай запитання.
-            </p>
           </div>
           <div 
             class="
@@ -1097,7 +1103,7 @@
             grid__item--row-1-2" 
         >
           <p class="footer__paragraph">
-            Працюємо з 8:00 до 18:00, пн-пт.
+            Ми працюємо 7 днів в неділю.
           </p>
         </div>
       </div>

@@ -1,5 +1,7 @@
 'use strict'
 
+//Navigation menu on the phone
+
 window.addEventListener('hashchange', () => {
   if (window.location.hash === '#menu') {
     document.body.classList.add('page__body--with-menu');
@@ -7,6 +9,8 @@ window.addEventListener('hashchange', () => {
     document.body.classList.remove('page__body--with-menu');
   }
 });
+
+//Slider for our-works block
 
 const swiper = new Swiper('.our-works__swiper', {
   direction: 'horizontal',
@@ -20,6 +24,8 @@ const swiper = new Swiper('.our-works__swiper', {
   speed: 900,
 });
 
+//Slider for comments block
+
 const swiperComments = new Swiper('.comments__swiper', {
   direction: 'horizontal',
   loop: true,
@@ -32,6 +38,7 @@ const swiperComments = new Swiper('.comments__swiper', {
   speed: 900,
 });
 
+//Answers for faq block
 
 const plusButton = document.querySelectorAll('.faq__button');
 const questionBlock = document.querySelectorAll('.faq__question-container');
@@ -77,6 +84,8 @@ plusButton.forEach((button, index) => {
   });
 });
 
+//More services button on the phone (Price block)
+
 const moreServiceButton = document.querySelector('.price__button-more');
 const allPriceBlocks = document.querySelectorAll('.price__block');
 const lastFourPriceBlocks = Array.from(allPriceBlocks).slice(-4);
@@ -91,6 +100,8 @@ moreServiceButton.addEventListener('click', (e) => {
 
   moreServiceButton.style.display = 'none'
 });
+
+//Counter for counter block
 
 function startCounter(element, target) {
   let count = 0;
@@ -112,7 +123,6 @@ function startCounter(element, target) {
 
 const counterBlocks = document.querySelectorAll('.counter__block');
 
-// Функція, яка запускає лічильник для всіх блоків
 function animateCounters() {
   counterBlocks.forEach((counterBlock) => {
     const counterTitle = counterBlock.querySelector('.counter__title');
@@ -125,35 +135,67 @@ function animateCounters() {
 
 window.addEventListener('load', animateCounters);
 
+//Form on the header
+
 const form = document.querySelector('.header__form');
-const phoneInput = document.querySelector('input[type="tel"]');
+const phoneInput = document.getElementById('phone-input');
 const nameInput = document.querySelector('input[type="text"]');
 const submitButton = document.querySelector('.header__button');
+const phoneError = document.getElementById('phone-error');
+const nameError = document.getElementById('name-error');
+const phonePattern = /^\d+$/;
+
+
+phoneInput.addEventListener('input', () => {
+  const phone = phoneInput.value;
+  const isPhoneValid = phonePattern.test(phone);
+
+  if (isPhoneValid) {
+    phoneInput.classList.remove('invalid');
+    phoneError.style.display = 'none';
+  } else {
+    phoneInput.classList.add('invalid');
+    phoneError.style.display = 'block';
+  }
+});
 
 form.addEventListener('submit', function (event) {
   event.preventDefault();
   
   const phone = phoneInput.value;
   const name = nameInput.value;
+
+  const isPhoneValid = phonePattern.test(phone);
   
   phoneInput.classList.remove('invalid');
   nameInput.classList.remove('invalid');
   
-  if (!phone || !name) {
-    if (!phone) {
+  if (!isPhoneValid || !name.trim()) {
+    if (!isPhoneValid) {
       phoneInput.classList.add('invalid');
+      phoneError.style.display = 'block';
     }
     if (!name) {
       nameInput.classList.add('invalid');
+      nameError.style.display = 'block';
     }
-    
-    alert('Заповніть всі поля форми');
+
     return;
   }
   
   // Оновіть цей URL на ваш сервер або сервер, який обробляє дані форми
   const serverUrl = 'http://localhost:3000';
-  
+  const telegramBotToken = '6642633947:AAHGhbzVGXD8pVfhtbbAFGDil-NdkpctAoQ';
+  const chatId = '272650225';
+  const message = `Телефон: ${phone}, Ім'я: ${name}`;
+
+  const apiUrl = `https://api.telegram.org/bot${telegramBotToken}/sendMessage`;
+
+  const data = {
+    chat_id: chatId,
+    text: message,
+  };
+
   fetch(serverUrl, {
     method: 'POST',
     headers: {
@@ -163,42 +205,28 @@ form.addEventListener('submit', function (event) {
   })
     .then(response => {
       if (response.ok) {
-        alert('Дані успішно відправлені');
         form.reset();
+        
+        return fetch(apiUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
       } else {
         alert('Помилка при відправці даних');
       }
     })
-    .catch(error => {
-      console.error('Помилка: ', error);
-    });
-  
-  const telegramBotToken = '6642633947:AAHGhbzVGXD8pVfhtbbAFGDil-NdkpctAoQ';
-  const chatId = '272650225';
-  const message = 'Ваше повідомлення';
-
-  const apiUrl = `https://api.telegram.org/bot${telegramBotToken}/sendMessage`;
-
-  const data = {
-    chat_id: chatId,
-    text: message,
-  };
-
-  fetch(apiUrl, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  })
-    .then(response => {
-      if (response.ok) {
-        console.log('Повідомлення відправлено успішно');
-      } else {
-        console.error('Помилка при відправці повідомлення');
-      }
-    })
-    .catch(error => {
-      console.error('Помилка: ', error);
-    });
+          .then(response => {
+            if (response && response.ok) {
+              console.log('Повідомлення відправлено успішно');
+            } else {
+              console.error('Помилка при відправці повідомлення в Telegram');
+            }
+          })
+          .catch(error => {
+            console.error('Помилка: ', error);
+          });
 });
+

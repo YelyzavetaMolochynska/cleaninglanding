@@ -52,7 +52,7 @@ p {
   overflow: hidden;
 }
 .page__section {
-  margin-bottom: 60px;
+  margin-bottom: 70px;
 }
 @media (min-width: 940px) {
   .page__section {
@@ -82,20 +82,20 @@ p {
   font-size: 30px;
   text-align: center;
   line-height: 32px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 @media (min-width: 940px) {
   .page__title {
     font-size: 52px;
     line-height: 64px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 }
 @media (min-width: 1280px) {
   .page__title {
     font-size: 60px;
     line-height: 64px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 }
 .page__paragraph {
@@ -942,6 +942,94 @@ p {
   }
 }
 
+.form {
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 940px) {
+  .form {
+    grid-column: 1/5;
+    grid-row: 1/3;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px 25px 31px;
+    background-color: #fff;
+    box-shadow: -5px 5px 23px 0px rgba(0, 0, 0, 0.168627451);
+    border-radius: 8px;
+    z-index: 4;
+    margin: auto 0;
+  }
+}
+@media (min-width: 1280px) {
+  .form {
+    grid-column: 1/5;
+    grid-row: 1/3;
+    height: fit-content;
+  }
+}
+.form__input-label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.form__input-label--last {
+  margin-bottom: 30px;
+}
+@media (min-width: 940px) {
+  .form__input-label--last {
+    margin-bottom: 22px;
+  }
+}
+.form__input {
+  padding: 10px 15px;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 14px;
+}
+.form__input:hover {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #070707;
+}
+@media (min-width: 940px) {
+  .form__input {
+    padding: 16px;
+    font-size: 16px;
+  }
+}
+.form__input::placeholder {
+  color: #717171;
+}
+.form__input:hover {
+  border: 1px solid #070707;
+}
+.form__input:focus {
+  border-color: #070707;
+  outline: none;
+}
+.form__input.invalid {
+  border-color: #d94c35;
+}
+.form__input-error {
+  font-size: 12px;
+  color: #d94c35;
+  display: none;
+}
+@media (min-width: 940px) {
+  .form__input-error {
+    font-size: 12px;
+  }
+}
+.form__button {
+  outline: none;
+  border: none;
+}
+
 .header {
   width: 100vw;
   box-sizing: border-box;
@@ -1146,32 +1234,6 @@ p {
     grid-row: 1/3;
   }
 }
-.header__form {
-  padding: 15px 0;
-  display: flex;
-  flex-direction: column;
-}
-@media (min-width: 940px) {
-  .header__form {
-    grid-column: 1/5;
-    grid-row: 1/3;
-    width: fit-content;
-    height: fit-content;
-    padding: 20px 25px 31px;
-    background-color: #fff;
-    box-shadow: -5px 5px 23px 0px rgba(0, 0, 0, 0.168627451);
-    border-radius: 8px;
-    z-index: 4;
-    margin: auto 0;
-  }
-}
-@media (min-width: 1280px) {
-  .header__form {
-    grid-column: 1/5;
-    grid-row: 1/3;
-    height: fit-content;
-  }
-}
 .header__subtitle {
   font-size: 18px;
   line-height: 27px;
@@ -1215,53 +1277,6 @@ p {
     line-height: 24px;
     margin-bottom: 32px;
   }
-}
-.header__input {
-  padding: 10px 15px;
-  outline: none;
-  border: none;
-  box-sizing: border-box;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  outline: none;
-  margin-bottom: 10px;
-  font-size: 14px;
-}
-.header__input:hover {
-  outline: none;
-  border: none;
-  border-bottom: 1px solid #070707;
-}
-@media (min-width: 940px) {
-  .header__input {
-    padding: 16px;
-    font-size: 16px;
-  }
-}
-.header__input--last {
-  margin-bottom: 30px;
-}
-@media (min-width: 940px) {
-  .header__input--last {
-    margin-bottom: 22px;
-  }
-}
-.header__input::placeholder {
-  color: #717171;
-}
-.header__input:hover {
-  border: 1px solid #070707;
-}
-.header__input:focus {
-  border-color: #070707;
-  outline: none;
-}
-.header__input:invalid {
-  border-color: #d94c35;
-}
-.header__button {
-  outline: none;
-  border: none;
 }
 
 .button {
@@ -1339,6 +1354,14 @@ p {
 .about-us__paragraph {
   z-index: 3;
   margin-bottom: 0;
+}
+.about-us__title {
+  margin-bottom: 10px;
+}
+@media (min-width: 940px) {
+  .about-us__title {
+    margin-bottom: 20px;
+  }
 }
 .about-us__image-container {
   display: flex;

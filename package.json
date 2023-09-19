@@ -1,7 +1,6 @@
 {
   "scripts": {
-    "lint": "eslint",
-    "type": "module"
+    "lint": "eslint"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -10,5 +9,6 @@
   },
   "devDependencies": {
     "eslint": "^8.48.0"
-  }
+  },
+  "type": "commonjs"
 }

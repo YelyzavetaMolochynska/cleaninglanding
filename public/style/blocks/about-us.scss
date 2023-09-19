@@ -7,6 +7,14 @@
     margin-bottom: 0;
   }
 
+  &__title {
+    margin-bottom: 10px;
+
+    @include onSmallDesktop {
+      margin-bottom: 20px;
+    }
+  }
+
   &__image-container {
     display: flex; 
     z-index: -1;

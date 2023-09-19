@@ -12,7 +12,7 @@
   }
 
   &__section {
-    margin-bottom: 60px;
+    margin-bottom: 70px;
 
     @include onSmallDesktop {
       margin-bottom: 140px;
@@ -43,18 +43,18 @@
     font-size: 30px;
     text-align: center;
     line-height: 32px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 
     @include onSmallDesktop {
       font-size: 52px;
       line-height: 64px;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
     }
 
     @include onDesktop {
       font-size: 60px;
       line-height: 64px;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
     }
   }
 
